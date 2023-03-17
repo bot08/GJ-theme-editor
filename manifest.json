@@ -1,0 +1,20 @@
+{
+    "name": "GJ-theme-editor",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "",
+    "author": "Kidala123#9662",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://genshin-journey.ml/*"
+            ],
+            "css": [
+                "src/custom.css"
+            ],
+            "js": [
+                "src/index.js"
+            ]
+        }
+    ]
+}
