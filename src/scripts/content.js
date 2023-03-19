@@ -76,5 +76,17 @@ function customBaseTheme(){
 console.log("GJ theme enable");
 document.getElementsByClassName("flex items-center lg:mr-5")[0].outerHTML = ""; // delete theme switch
 
+
+/* CREATED BY ILFEY */
+
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    if (request.action == "switchTheme") {
+        baseTheme = baseTheme === "dark" ? "light" : "dark";
+        customBaseTheme();
+    }
+});
+
+/* CREATED BY ILFEY */
+
 customBaseTheme()
 insertCSS();

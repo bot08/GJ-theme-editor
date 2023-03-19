@@ -5,7 +5,7 @@
     "description": "",
     "author": "Kidala123#9662",
     "action":{
-        "default_popup": "src/index.html",
+        "default_popup": "src/popup/index.html",
         "default_title": "GJ theme editor"
     },
     "content_scripts": [
@@ -17,7 +17,7 @@
                 "src/custom.css"
             ],
             "js": [
-                "src/index.js"
+                "src/scripts/content.js"
             ]
         }
     ]
