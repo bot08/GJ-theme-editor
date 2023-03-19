@@ -1,3 +1,6 @@
+// settings
+let baseTheme = 'white';
+
 let baseRoundMD = 1.0;
 let baseRoundLG = 1.5;
 let baseRoundXL = 2.5;
@@ -55,7 +58,23 @@ function insertCSS(){
 
 }
 
+function customBaseTheme(){
+    if(baseTheme == "dark"){
+        localStorage.setItem("theme", "dark");
+        document.querySelector("html").classList.add("dark");
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#374151");
+    }
+    else{
+        if(localStorage.getItem('theme')=="dark") document.querySelector("html").className = '';
+        localStorage.setItem("theme", "white");
+        document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f9fafb");
+    }
+}
+
 
 // Start
-console.log("GJ theme enable")
+console.log("GJ theme enable");
+document.getElementsByClassName("flex items-center lg:mr-5")[0].outerHTML = ""; // delete theme switch
+
+customBaseTheme()
 insertCSS();
