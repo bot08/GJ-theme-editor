@@ -1,9 +1,13 @@
 {
-    "name": "GJ-theme-editor",
+    "name": "GJ theme editor",
     "version": "1.0.0",
     "manifest_version": 3,
     "description": "",
     "author": "Kidala123#9662",
+    "action":{
+        "default_popup": "src/popup/index.html",
+        "default_title": "GJ theme editor"
+    },
     "content_scripts": [
         {
             "matches": [
@@ -13,7 +17,7 @@
                 "src/custom.css"
             ],
             "js": [
-                "src/index.js"
+                "src/scripts/content.js"
             ]
         }
     ]
