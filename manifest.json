@@ -8,6 +8,9 @@
         "default_popup": "src/popup/index.html",
         "default_title": "GJ theme editor"
     },
+    "permissions": [
+        "storage"
+    ],
     "content_scripts": [
         {
             "matches": [

@@ -60,14 +60,22 @@ function insertCSS(){
 
 function customBaseTheme(){
     if(baseTheme == "dark"){
+        // localstorage data
         localStorage.setItem("theme", "dark");
+        // chrome storage
+        chrome.storage.local.set({ theme: "dark" })
+        // edit site
         document.querySelector("html").classList.add("dark");
         document.querySelector('meta[name="theme-color"]').setAttribute("content", "#374151");
     }
     else{
+        // edit site
         if(localStorage.getItem('theme')=="dark") document.querySelector("html").className = '';
-        localStorage.setItem("theme", "white");
         document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f9fafb");
+        // chrome storage
+        chrome.storage.local.set({ theme: "white" })
+        // localstorage data
+        localStorage.setItem("theme", "white");
     }
 }
 
